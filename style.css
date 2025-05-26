@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+html, body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.navbar {
+  background: #007acc;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: slideDown 0.8s ease forwards;
+}
+
+.portfolio {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background: #005a9c;
+  color: #ffeb3b;
+  outline: none;
+}
+
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+
+
+.myself {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+  animation: fadeIn 1.2s ease forwards;
+  gap: 1.5rem;
+}
+
+.photo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #00acc1;
+  box-shadow: 0 8px 20px rgba(0, 172, 193, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.photo img:hover,
+.photo img:focus {
+  transform: scale(1.05) rotate(3deg);
+  outline: none;
+  box-shadow: 0 12px 25px rgba(0, 172, 193, 0.8);
+}
+
+.myself h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #004d40;
+  letter-spacing: 1.5px;
+  animation: slideInLeft 1s ease forwards;
+}
+
+.myself h1 span {
+  color: #00acc1;
+  font-weight: 800;
+}
+
+.myself h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #007acc;
+  animation: slideInRight 1s ease forwards;
+}
+
+
+.circle-nav {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 3rem 1rem 5rem;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #00acc1;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0,172,193,0.4);
+  transition: background 0.4s, transform 0.3s, box-shadow 0.4s;
+  user-select: none;
+}
+
+.circle a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.circle:hover,
+.circle:focus-within {
+  background: #007a8a;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 122, 138, 0.7);
+  outline: none;
+}
+
+
+footer.all-contact {
+  background: #004d40;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.contact a {
+  color: white;
+  margin: 0 0.8rem;
+  font-size: 1.6rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact a:hover,
+.contact a:focus {
+  color: #80deea;
+  transform: scale(1.2);
+  outline: none;
+}
+
+.contact p {
+  margin-top: 0.7rem;
+  font-size: 1.1rem;
+  color: #b2dfdb;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideDown {
+  0% {opacity: 0; transform: translateY(-20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideInLeft {
+  0% {opacity: 0; transform: translateX(-40px);}
+  100% {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes slideInRight {
+  0% {opacity: 0; transform: translateX(40px);}
+  100% {opacity: 1; transform: translateX(0);}
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 1rem 4rem;
+  }
+
+  .myself {
+    flex-direction: row;
+    text-align: left;
+    padding: 4rem 6rem;
+    gap: 3rem;
+  }
+
+  .photo img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .myself h1 {
+    font-size: 3rem;
+  }
+
+  .myself h2 {
+    font-size: 1.8rem;
+  }
+
+  .circle-nav {
+    gap: 4rem;
+  }
+
+  .circle {
+    width: 140px;
+    height: 140px;
+    font-size: 1.6rem;
+  }
+
+  footer.all-contact {
+    padding: 2rem 6rem;
+  }
+
+  .contact a {
+    font-size: 2rem;
+  }
+
+  .contact p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #007acc;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .myself {
+    padding: 3rem 1rem;
+  }
+
+  .circle-nav {
+    gap: 2rem;
+    padding: 2rem 1rem 3rem;
+  }
+}
